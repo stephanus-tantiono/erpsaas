@@ -7,6 +7,10 @@ const handleTopbarAndSidebarHover = () => {
     const topbarNav = document.querySelector('.fi-topbar > nav');
     const sidebarHeader = document.querySelector('.fi-sidebar-header');
 
+    if (!topbarNav) {
+        return;
+    }
+
     const addHoveredClass = () => {
         topbarNav.classList.add('topbar-hovered');
         if (sidebarHeader) {
@@ -34,6 +38,10 @@ const handleScroll = () => {
     const topbarNav = document.querySelector('.fi-topbar > nav');
     const sidebarHeader = document.querySelector('.fi-sidebar-header');
 
+    if (!topbarNav) {
+        return;
+    }
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
             topbarNav.classList.add('topbar-scrolled');
@@ -48,5 +56,3 @@ const handleScroll = () => {
         }
     });
 };
-
-
